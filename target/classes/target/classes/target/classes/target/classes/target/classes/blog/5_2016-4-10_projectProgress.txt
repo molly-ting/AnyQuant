@@ -1,0 +1,5 @@
+Group name:GoldenBullet
+when:第5周
+what:美化界面
+todo:完成逻辑层开发，添加图表界面
+problem:添加图标显示较慢

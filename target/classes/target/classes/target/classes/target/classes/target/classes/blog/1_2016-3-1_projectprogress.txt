@@ -1,0 +1,4 @@
+group name:GoldenBullet
+when：第一周
+what：小组成员完成注册，完成小组组建，开始尝试调用AnyQuant的API，寻找合适的界面开发工具，以应对统计数据的要求
+todo：预计小组下周将学会调用AnyQuant的API，将确定界面的开发工具以及初步的学习，并完成部分文档的编写

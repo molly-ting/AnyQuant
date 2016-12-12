@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/anyquant.iml" filepath="$PROJECT_DIR$/anyquant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-businessLogic/anyquant-businessLogic.iml" filepath="$PROJECT_DIR$/anyquant-businessLogic/anyquant-businessLogic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-data/anyquant-data.iml" filepath="$PROJECT_DIR$/anyquant-data/anyquant-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-dto_Service/anyquant-dto_Service.iml" filepath="$PROJECT_DIR$/anyquant-dto_Service/anyquant-dto_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-integration/anyquant-integration.iml" filepath="$PROJECT_DIR$/anyquant-integration/anyquant-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-inteji/anyquant-inteji.iml" filepath="$PROJECT_DIR$/anyquant-inteji/anyquant-inteji.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-presentation/anyquant-presentation.iml" filepath="$PROJECT_DIR$/anyquant-presentation/anyquant-presentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-vo_Service/anyquant-vo_Service.iml" filepath="$PROJECT_DIR$/anyquant-vo_Service/anyquant-vo_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anyquant-web/anyquant-web.iml" filepath="$PROJECT_DIR$/anyquant-web/anyquant-web.iml" />
+    </modules>
+  </component>
+</project>

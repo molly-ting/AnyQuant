@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>轮播图带遮罩层</title>
+
+    <style type="text/css">
+
+        html,body,ul,li{ width: 100%;min-width: 1000px;margin: 0;padding: 0;}
+
+        ul,li,ol{ list-style:none;}
+
+        /*---轮播效果---*/
+
+        .slide-oute {position: relative;width: 100%;height: 378px;background-color: #fff; overflow: hidden;}
+
+        .scroll { width: 1000px;height: 378px;margin: auto;position:relative ; background-color: #f5f5f9;}
+
+        .scroll ul {height: 100%; position:absolute;left:0;top:0;}
+
+        .scroll li {  width: 1000px; float: left;overflow: hidden;}
+
+        .scroll li img {float: left; width: 100%;}
+
+        /*遮罩层效果*/
+
+        .mask {width:100%;height:378px;position: absolute;top: 0;}
+
+        .mask-left{height:100%;position: absolute;left:0;right:50%;margin-right:500px; background-color: rgba(31,26,26, 0.25 )}
+
+        .mask-cont{width:1000px;height:100%;position: absolute;left: 50%;margin-left: -500px}
+
+        .mask-right{height:100%;position: absolute;left:50%;right:0;margin-left:500px;background-color: rgba(31,26,26, 0.25 )}
+
+        /*-轮播效果结束-*/
+
+    </style>
+
+</head>
+
+<body>
+
+<!--轮播开始-->
+
+<div class="slide-oute">
+
+    <div class="scroll">
+
+        <ul>
+
+            <li><img src="assets/img/img1.jpg" alt=""/></li>
+
+            <li><img src="assets/img/img2.jpg" alt=""/></li>
+
+            <li><img src="assets/img/img3.jpg" alt=""/></li>
+
+            <!--<li><img src="images/banner4.jpg" alt=""/></li>-->
+
+        </ul>
+
+    </div>
+
+    <div class="mask" style="">
+
+        <div class="mask-left"></div>
+
+        <div class="mask-cont"></div>
+
+        <div class="mask-right"></div>
+
+    </div>
+
+</div>
+
+<!--轮播结束-->
+
+<script src="assets/js/libs/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    $(function(){
+
+        slide();
+
+    });
+
+    /*轮播图*/
+
+    function slide(){
+
+        var  oDiv= $('.mask'),                              //最外层div
+
+                oUl= $('.scroll ul'),                          //中间层ul
+
+                oLi= $('.scroll ul li'),                       //每一个板块li
+
+                speed=-1000,                                     //每次移动距离
+
+                time = 2000;                                     //动画时间
+
+        //复制两份ul里面的内容到ul中，为的是实现无缝
+
+        oLi.clone(true).appendTo(oUl);
+
+        var  oli = oUl.children("li"),
+
+                Length = oli.length ,                         //li标签个数
+
+                oUlwidth = oli.eq(0).width()*Length+'px';     //ul的总宽aaaa度
+
+        //计算新的ul的长度
+
+        oUl.css("width",oUlwidth);
+
+        //设置速度
+
+        function move(){
+
+            //向左移动
+
+            if(oUl[0].offsetLeft<=-oUl[0].offsetWidth/2){
+
+                oUl[0].style.left='0';
+
+            }
+
+            //设置ul的left值
+
+            oUl[0].style.left=oUl[0].offsetLeft+speed+'px';      //每次增加移动距离
+
+        }
+
+        var timer=setInterval(move,time);
+
+        //左右按钮控制效果
+
+        oDiv.hover(function(){
+
+            clearInterval(timer);
+
+        },function(){
+
+            clearInterval(timer);
+
+            timer=setInterval(move,time);
+
+        });
+
+    }
+
+</script>
+
+</body>
+
+</html>

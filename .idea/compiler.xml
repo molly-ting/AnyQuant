@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="anyquant-businessLogic" />
+        <module name="anyquant-data" />
+        <module name="anyquant-dto_Service" />
+        <module name="anyquant-integration" />
+        <module name="anyquant-inteji" />
+        <module name="anyquant-presentation" />
+        <module name="anyquant-vo_Service" />
+        <module name="anyquant-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="anyquant" target="1.8" />
+      <module name="anyquant-businessLogic" target="1.8" />
+      <module name="anyquant-data" target="1.8" />
+      <module name="anyquant-dto_Service" target="1.8" />
+      <module name="anyquant-integration" target="1.8" />
+      <module name="anyquant-inteji" target="1.8" />
+      <module name="anyquant-presentation" target="1.8" />
+      <module name="anyquant-vo_Service" target="1.8" />
+      <module name="anyquant-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

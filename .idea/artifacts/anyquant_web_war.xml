@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="anyquant-web:war">
+    <output-path>$PROJECT_DIR$/anyquant-web/target</output-path>
+    <root id="archive" name="anyquant-web.war">
+      <element id="artifact" artifact-name="anyquant-web:war exploded" />
+    </root>
+  </artifact>
+</component>

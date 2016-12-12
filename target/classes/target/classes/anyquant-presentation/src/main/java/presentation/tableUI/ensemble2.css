@@ -1,0 +1,70 @@
+
+/* ====== CANDLE STICK CHART =========================================================== */
+.candlestick-tooltip-label {
+    -fx-font-size: 0.75em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+    -fx-padding: 2.0 5.0 2.0 0.0;
+}
+.candlestick-average-line {
+    -fx-stroke:#FF7F00;
+    -fx-stroke-width: 2px;
+}
+.candlestick-candle {
+    
+}
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.root{
+	-fx-background-color: #454545; 
+}
+.axis{
+	-fx-tick-label-fill:#ffffff;
+	-fx-start-margin: -5.0px;
+	
+}
+.axis-label{
+	-fx-text-fill:#ffffff;
+}
+.axis-tick-mark {
+    -fx-stroke: #ffffff; 
+}
+.axis-minor-tick-mark {
+    -fx-stroke: #ffffff;
+}
+
+.candlestick-bar {
+    -fx-padding: 5.0;
+    -demo-bar-fill: red;
+    -bar_fill:red;
+   	-fx-border-color: -bar_fill;
+   	-fx-border-width: 2px;
+    -fx-background-color: -demo-bar-fill;
+    -fx-background-insets: 0.0,1.0,2.0;
+}
+
+.candlestick-bar.close-above-open {
+    -demo-bar-fill: #404040;
+    -bar_fill:#FF3030;
+}
+
+.candlestick-bar.open-above-close {
+    -demo-bar-fill: rgb(94.0,243.0,244.0);
+    -bar_fill:rgb(94.0,243.0,244.0);
+}
+.chart{
+	-fx-padding: 0.0px;
+}
+.chart-content {
+    -fx-padding: 5.0px;
+}
+.chart-legend {
+   -fx-padding: 0.0px;
+   -fx-border-width: 2.0px
+}
+.chart-title{
+	-fx-padding: 0.0px;
+	-fx-border-width: 5.0px
+}

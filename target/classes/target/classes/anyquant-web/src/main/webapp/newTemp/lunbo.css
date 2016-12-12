@@ -1,0 +1,23 @@
+.mybanner{ margin:0 auto; border:2px solid darkslategray; width:440px; height:247px; overflow:hidden; position:relative;}
+.mybanner .img{ width:5000px; position:absolute; left:0px; top:0;}
+.mybanner .img li{ float:left;}
+
+.mybanner .num{ position:absolute; width:100%; bottom:10px; left:0; text-align:center; font-size:0px;}
+.mybanner .num li{ width:10px;height:10px; background:#888; border-radius:50%; display:inline-block; margin:0 3px; cursor:pointer;}
+.mybanner .num li.on{ background:#F60;}
+
+.mybanner .btn{ width:30px; height:50px; background:rgba(0,0,0,0.5); position:absolute; top:50%; margin-top:-25px; cursor:pointer; text-align:center; line-height:50px; color:#fff; font-size:40px; font-family:"宋体"; display:none;}
+.mybanner:hover .btn{ display:block;}
+
+.mybanner .btn_l{ left:0;}
+.mybanner .btn_r{ right:0;}
+
+.spaninlunbo{
+    position: absolute;
+    top: 70%;
+    left: 0;
+    background:rgba(0,0,0,0.5);
+    font-size: 29px;
+    font-family: 微软雅黑;
+    color: snow;
+}

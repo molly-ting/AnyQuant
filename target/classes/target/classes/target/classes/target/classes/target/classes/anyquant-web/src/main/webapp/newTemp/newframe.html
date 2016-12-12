@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="assets/js/libs/jquery.min.js"></script>
+    <script src="changechart.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AnyQuant WEB VERSION 0.1">
+    <meta name="author" content="AnyQuant">
+    <meta name="keyword" content="AnyQuant WEB VERSION">
+    <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+    <title>AnyQuant</title>
+    <!-- Main styles for this application -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/baraja.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+    <script type="text/javascript" src="assets/js/views/modernizr.custom.79639.js"></script>
+    <style>
+
+        [class*="col-"]{
+            padding-top: 17px;
+            padding-bottom: 15px;
+            /*background-color: #00a67c;*/
+            /*border: 1px solid;*/
+        }
+    </style>
+</head>
+<!-- BODY options, add following classes to body to change options
+    1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+    2. 'sidebar-nav'		  - Navigation on the left
+        2.1. 'sidebar-off-canvas'	- Off-Canvas
+            2.1.1 'sidebar-off-canvas-push'	- Off-Canvas which move content
+            2.1.2 'sidebar-off-canvas-with-shadow'	- Add shadow to body elements
+    3. 'fixed-nav'			  - Fixed navigation
+    4. 'navbar-fixed'		  - Fixed navbar
+-->
+<body class="navbar-fixed  fixed-nav pace-done" style="background-color: whitesmoke">
+
+<header class="navbar navbar-light brand-dark">
+
+    <a class="navbar-brand" href="#"></a>
+
+    <ul class="nav navbar-nav pull-right hidden-md-down">
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-home"></i>&nbsp;&nbsp;HOME</a>
+        </li>
+
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-graph"></i>&nbsp;&nbsp;股票列表</a>
+        </li>
+
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-chart"></i>&nbsp;&nbsp;大盘</a>
+        </li>
+
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-globe"></i>&nbsp;&nbsp;行业</a>
+        </li>
+    </ul>
+</header>
+<!-- Main content -->
+<main id="content">
+    <div class="container-fluid" style="margin-left: 0px">
+        <div class="row row-equal  animated fadeIn">
+            <div class="col-md-3" id="leftdiv">
+                <div class="input-group" style="padding-bottom: 4px">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                    </span>
+                    <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="股票代码">
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-align-justify"></i>股票列表
+                    </div>
+                    <div class="card-block">
+                        <table class="table" id="mytable">
+                            <thead>
+                            <tr>
+                                <th>股票代码</th>
+                                <th>股票名</th>
+                                <th>收盘价 </th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr onclick='tablefunc(1)' style="cursor: pointer">
+
+                                <td id="123">sh600010</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-down" style="color: green;"></i></td>
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-down" style="color: green;"></i></td>
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+                            <tr>
+                                <td>sh600000</td>
+                                <td>浦发银行</td>
+                                <td>1238  <i class="fa fa-arrow-up" style="color: red;"></i></td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+            <div class="col-md-4" id="middlediv">
+                <div class="social-box facebook card">
+                    <i class="fa fa-facebook"></i>
+                    <div class="chart-wrapper">
+                        <canvas id="social-box-chart-1" width="auto" height="90"></canvas>
+                    </div>
+                    <ul>
+                        <li>
+                            <strong>89k</strong>
+                            <span>friends</span>
+                        </li>
+                        <li>
+                            <strong>459</strong>
+                            <span>feeds</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <script src="https://code.highcharts.com/stock/highstock.js"></script>
+                <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+                <div id="cdivcharts"
+                     style="min-width: 100px; height: 400px; margin: 0 auto;"></div>
+                <script src="assets/js/views/mychart.js"></script>
+
+
+                <div style="background-color: white;height: 35px;padding-right: 15px">
+                    <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group" data-toggle="buttons" aria-label="First group">
+                            <label class="btn btn-sm btn-secondary-outline"   onclick=changeCharts()>
+                                <input type="radio" name="options" id="option1" autocomplete="off">收盘价
+                            </label>
+                            <label class="btn btn-sm btn-secondary-outline active" onclick=changeCharts()>
+                                <input type="radio" name="options" id="option2"  autocomplete="off">K线图
+                            </label>
+                            <label class="btn btn-sm btn-secondary-outline" onclick=changeBarCharts()>
+                                <input type="radio" name="options" id="option3"  autocomplete="off">成交量
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 13px">
+                    <div class="card-header" style="font-weight: bold">
+                        <i class="fa fa-newspaper-o"></i>新闻
+                    </div>
+                    <div class="card-block">
+                        <p><a href="#">这里是新闻1</a></p>
+                        <p><a href="#">这里是新闻2</a></p>
+                        <p><a href="#">这里是新闻3</a></p>
+                        <p><a href="#">这里是新闻4</a></p>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+            <div class="col-md-5" id="rightdiv">
+                <div class="row row-equal animated fadeIn">
+
+                    <div class="col-md-5" style="padding-top: 0px;padding-bottom: 0px">
+
+                            <div class="baraja-demo" >
+                                <ul id="baraja-el" class="baraja-container">
+                                    <li>
+                                        <h4>X模型</h4><p>X模型经过科学研究证明,是世界上最好的股票分析模型,它速度又快,准确度又高,包你只赔不赚</p>
+                                        <h4 style="text-align: center">AnyQuant得分</h4>
+                                        <p id="score4x" style="font-size: 80px;text-align: center">98</p>
+
+
+                                    </li>
+                                    <li>
+                                        <h4>神经病模型</h4><p>神经病模型经过科学研究证明,是世界上最好的股票分析模型,它速度又快,准确度又高,包你只赔不赚</p>
+                                        <h4 style="text-align: center">AnyQuant得分</h4>
+                                        <p style="font-size: 80px;text-align: center">100</p>
+
+
+                                    </li>
+                                    <li>
+                                        <h4>快速模型</h4><p>快速模型经过科学研究证明,是世界上最好的股票分析模型,它速度又快,准确度又高,包你只赔不赚</p>
+                                        <h4 style="text-align: center">AnyQuant得分</h4>
+                                        <p style="font-size: 80px;text-align: center">87</p>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                        <script type="text/javascript" src="assets/js/views/jquery.baraja.js"></script>
+                        <script type="text/javascript" src="assets/js/views/cardchange.js"></script>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-7" style="padding-top: 0px">
+                        <!--<script src="https://code.highcharts.com/highcharts.js"></script>-->
+                        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+                        <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+
+
+
+                        <div id="divspider" style="min-width: 200px; max-width: 1000px; height: 400px;"></div>
+                       <script src="assets/js/views/spiderweb.js"></script>
+
+                        </div>
+                    </div>
+
+
+
+                <div class="row row-equal  animated fadeIn" style="padding-left: 15px;padding-right: 15px;">
+                    <div class="row row-equal  animated fadeIn">
+                        <div  class="col-md-4" style="padding-top: 1px">
+                            <div class="card card-inverse card-danger">
+                                <div class="card-block">
+                                    <div class="h1 text-muted text-xs-right m-b-2">
+                                        <i class="icon-speedometer"></i>
+                                    </div>
+                                    <div class="h4 m-b-0">¥1000W</div>
+                                    <small class="text-muted text-uppercase font-weight-bold">截止2016.7.30,亏损1000万</small>
+                                    <progress class="progress progress-xs progress-danger m-t-1 m-b-0" value="25" max="100">98%</progress>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div  class="col-md-4" style="padding-top: 1px">
+                            <div class="card card-inverse card-warning">
+                                <div class="card-block">
+                                    <div class="h1 text-muted text-xs-right m-b-2">
+                                        <i class="icon-basket-loaded"></i>
+                                    </div>
+                                    <div class="h4 m-b-0">99</div>
+                                    <small class="text-muted text-uppercase font-weight-bold">AnyQuant策略得分</small>
+                                    <progress class="progress progress-xs progress-warning m-t-1 m-b-0" value="25" max="100">25%</progress>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div  class="col-md-4" style="padding-top: 1px">
+                            <div class="card card-inverse card-primary" style="background-color: #00a67c">
+                                <div class="card-block">
+                                    <div class="h1 text-muted text-xs-right m-b-2">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                    <div class="h4 m-b-0">98.2%</div>
+                                    <small class="text-muted text-uppercase font-weight-bold">算法此时的拟合度</small>
+                                    <progress class="progress progress-xs progress-primary m-t-1 m-b-0" value="25" max="100">98.2%</progress>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row row-equal  animated fadeIn" style="margin-left: 1px;margin-right:1px;background-color:#20a8d8; border-radius:5px;">
+                    <h6 style="text-align: center;padding-top: 5px;color: white;font-weight: bold">配置策略</h6>
+                    <div class="row row-equal  animated fadeIn">
+                        <div class="col-md-2"style="padding-top: 30px;padding-left: 20px">
+                            <span style="color: white ;font-weight: bold;">买卖日期</span>
+                        </div>
+
+                        <div class="col-md-10">
+                            <input type="text" id="range_04" name="example_name" value="">
+                        </div>
+                    </div>
+
+
+                    <div class="row row-equal  animated fadeIn">
+                        <div class="col-md-2" style="padding-top: 30px;padding-left: 20px">
+                            <span style="color: white ;font-weight: bold;">购买股数</span>
+                        </div>
+
+                        <div class="col-md-10">
+                            <input type="text" id="range_08" name="example_name" value="">
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</main>
+
+
+
+
+
+<footer id="footer">
+            <span class="text-left">
+                <a href="http://www.anyquant.net">AnyQuant</a>&nbsp;2016
+            </span>
+            <span class="pull-right">
+                Powered by <a href="http://genesisui.com">GenesisUI</a>
+            </span>
+</footer>
+<!-- Bootstrap and necessary plugins -->
+<!-- Bootstrap and necessary plugins -->
+<script src="assets/js/libs/ion.rangeSlider.min.js"></script>
+<!-- Custom scripts required by this view -->
+<script src="assets/js/views/sliders.js"></script>
+<script src="assets/js/libs/tether.min.js"></script>
+<script src="assets/js/libs/bootstrap.min.js"></script>
+<!--<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+<script src="assets/js/libs/pace.min.js"></script>
+<!-- Plugins and scripts required by all views -->
+<script src="assets/js/libs/Chart.min.js"></script>
+<script src="assets/js/views/shared.js"></script>
+<!-- GenesisUI main scripts -->
+<script src="assets/js/app.js"></script>
+<!-- Plugins and scripts required by this views -->
+<script src="assets/js/libs/toastr.min.js"></script>
+<script src="assets/js/libs/gauge.min.js"></script>
+<script src="assets/js/libs/moment.min.js"></script>
+<script src="assets/js/libs/daterangepicker.min.js"></script>
+<!-- Custom scripts required by this view -->
+
+<script src="assets/js/views/main.js"></script>
+<script src="assets/js/views/widgets.js"></script>
+
+
+</body>
+</html>

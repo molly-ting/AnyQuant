@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChartsChange</title>
+    <script src="assets/js/libs/jquery.min.js"></script>
+    <script src="changechart.js"></script>
+
+</head>
+<body>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<div id="chartcontainer">
+<div id="cdivcharts"
+     style="min-width: 100px; height: 400px; margin: 0 auto"></div>
+<script src="assets/js/views/mychart.js"></script>
+</div>
+
+
+<p><input type="button" value="changechart" onclick="changeCharts()" /></p>
+
+
+
+
+<select id="select" name="select" class="form-control" size="1" onchange="changeCharts()" style="border: hidden">
+    <option value="0">选择图表...</option>
+    <option value="1">K线图</option>
+    <option value="2">折线图</option>
+    <option value="3">饼图</option>
+</select>
+</body>
+</html>

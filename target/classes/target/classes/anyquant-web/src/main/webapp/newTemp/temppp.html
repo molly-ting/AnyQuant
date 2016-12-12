@@ -1,0 +1,413 @@
+<%@page import="vo.ImageNewsVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="blService.newsBLService.GetNewsBLService"%>
+<%@page import="businessLogic.newsBL.GetNews"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="assets/js/libs/jquery.min.js"></script>
+    <script src="changechart.js"></script>
+    <script src="lunbo.js"></script>
+    <link href="lunbo.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AnyQuant WEB VERSION 0.1">
+    <meta name="author" content="AnyQuant">
+    <meta name="keyword" content="AnyQuant WEB VERSION">
+    <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+    <title>AnyQuant</title>
+    <!-- Main styles for this application -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style2.css" rel="stylesheet">
+    <style>
+        .row{
+            margin-bottom: 20px;
+        }
+        .row.row{
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        [class*="col-"]{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            /*background-color: #00a67c;*/
+            /*border: 1px solid;*/
+        }
+    </style>
+</head>
+<!-- BODY options, add following classes to body to change options
+    1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+    2. 'sidebar-nav'		  - Navigation on the left
+        2.1. 'sidebar-off-canvas'	- Off-Canvas
+            2.1.1 'sidebar-off-canvas-push'	- Off-Canvas which move content
+            2.1.2 'sidebar-off-canvas-with-shadow'	- Add shadow to body elements
+    3. 'fixed-nav'			  - Fixed navigation
+    4. 'navbar-fixed'		  - Fixed navbar
+-->
+<body class="navbar-fixed  fixed-nav pace-done" style="background-color: whitesmoke">
+
+<header class="navbar navbar-light brand-dark">
+
+    <a class="navbar-brand" href="#"></a>
+
+    <ul class="nav navbar-nav pull-right hidden-md-down">
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-home"></i>&nbsp;&nbsp;HOME</i></a>
+        </li>
+
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-graph"></i>&nbsp;&nbsp;股票列表</i></a>
+        </li>
+
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-chart"></i>&nbsp;&nbsp;大盘</i></a>
+        </li>
+
+        <li class="nav-item" style="padding-right: 40px">
+            <a class="nav-link" href="#"><i class="icon-globe"></i>&nbsp;&nbsp;行业</a>
+        </li>
+    </ul>
+</header>
+<!-- Main content -->
+<main id="content">
+    <div class="container-fluid" style="margin-left: 0px">
+        <div class="row row-equal  animated fadeIn">
+            <div class="col-md-4" >
+                <div class="social-box facebook card">
+                    <div class = "bgtfgroup">
+                        <form>
+                            <input type="text" name="low" class = "idtf" placeholder="股票代码"/>
+                            <!--<button type="button" class="btn btn-primary-outline btn-sm">搜索</button>-->
+                        </form>
+                        <button type="submit" class="searchbt">
+                            <!--<img src = "assets/img/search1.png" style="width: auto;height: auto;align:center right;">-->
+                        </button>
+                    </div>
+                    <!--<canvas id="social-box-chart-1" width="auto" height="90"></canvas>-->
+                    <!--</div>-->
+                    <div class = "filter">
+                        <select>
+                            <!--<option value ="date">Volvo</option>-->
+                            <option value ="open">开盘价</option>
+                            <option value="close">收盘价</option>
+                            <option value="high">最高价</option>
+                            <option value="low">最低价</option>
+                            <option value="volume">成交量</option>
+                        </select>
+                        <form>
+                            <button type="button" class="btn btn-primary btn-sm">过滤</button>
+                        </form>
+                    </div>
+                    <ul>
+                        <li>
+                            <form>
+                                <input type="text" name="low" />
+                                <input type="text" name="high" />
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--/.social-box-->
+                <div class="card">
+
+                    <div class="card-header">
+                        <i class="fa fa-edit"></i> Angular DataTables
+                        <div class="card-actions">
+                            <a href="http://l-lin.github.io/angular-datatables/#/gettingStarted">
+                                <small class="text-muted">docs</small>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <table class="table table-striped table-bordered datatable">
+                            <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>开盘价</th>
+                                <th>收盘价</th>
+                                <th>最高价</th>
+                                <th>最低价</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Anton Phunihel</td>
+                                <td>2012/01/01</td>
+                                <td>Member</td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-success" href="#">
+                                        <i class="fa fa-search-plus "></i>
+                                    </a>
+                                    <a class="btn btn-info" href="#">
+                                        <i class="fa fa-edit "></i>
+                                    </a>
+                                    <a class="btn btn-danger" href="#">
+                                        <i class="fa fa-trash-o "></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Anton Phunihel</td>
+                                <td>2012/01/01</td>
+                                <td>Member</td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-success" href="#">
+                                        <i class="fa fa-search-plus "></i>
+                                    </a>
+                                    <a class="btn btn-info" href="#">
+                                        <i class="fa fa-edit "></i>
+                                    </a>
+                                    <a class="btn btn-danger" href="#">
+                                        <i class="fa fa-trash-o "></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Anton Phunihel</td>
+                                <td>2012/01/01</td>
+                                <td>Member</td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                                <td>
+                                    <a class="btn btn-success" href="#">
+                                        <i class="fa fa-search-plus "></i>
+                                    </a>
+                                    <a class="btn btn-info" href="#">
+                                        <i class="fa fa-edit "></i>
+                                    </a>
+                                    <a class="btn btn-danger" href="#">
+                                        <i class="fa fa-trash-o "></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="social-box twitter">
+
+                    <div class = "basicinfo">
+                        <span>股票代码</span>
+                        <span>收盘价(开盘价)(涨跌幅)</span><br/>
+                        <span>$50.86 –$0.58 (1.13%)</span>
+                    </div>
+                    <div class = "pricebefore">
+                        <span>昨日价格</span>
+                    </div>
+                    <ul class = "detailinfo">
+                        <li>
+                            <span>最高价</span><br>
+                            <span>最低价</span>
+                        </li>
+                        <li>
+                            <span>成交量</span><br>
+                            <span>成交金额</span>
+                        </li>
+                        <li>
+                            <span>市盈率</span><br>
+                            <span>市净率</span>
+                        </li>
+                        <li>
+                            <span>MA10</span><br>
+                            <span>乖离率</span>
+                        </li>
+                    </ul>
+                </div>
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                <div id="cdivcharts"
+                     style="min-width: 100px; height: 400px; margin: 0 auto"></div>
+                <script src="assets/js/views/mychart.js"></script>
+
+                <div style="background-color: white;height: 40px">
+                    <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group" data-toggle="buttons" aria-label="First group">
+                            <label class="btn btn-sm btn-secondary-outline"   onclick=changeCharts()>
+                                <input type="radio" name="options" id="option1" autocomplete="off">收盘价
+                            </label>
+                            <label class="btn btn-sm btn-secondary-outline active" onclick=changeCharts()>
+                                <input type="radio" name="options" id="option2"  autocomplete="off">K线图
+                            </label>
+                            <label class="btn btn-sm btn-secondary-outline" onclick=changeBarCharts()>
+                                <input type="radio" name="options" id="option3"  autocomplete="off">成交量
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+                <p></p>
+                <div class="mybanner" style="width: auto">
+                    <ul class="img" style="padding:0; margin:0; list-style:none;">
+                        <%
+                        GetNewsBLService service=new GetNews();
+                        ArrayList<ImageNewsVO> list=service.getImageNewsList();
+                        String s="<li><a target=\"_blank\" href=\"";
+                                         for(ImageNewsVO vo:list){
+                                         s+=vo.getURL();
+                                         s+="\"><img src=\"";
+                                                     s+=vo.getPicurl();
+                                                     s+="\" style=\"width: 900px\"></a></li>";
+                        out.println(s);
+                        s="<li><a target=\"_blank\" href=\"";
+                                  }
+                                  %>
+
+                    </ul>
+
+                    <span class="spaninlunbo" id="spannews">新闻标题</span>
+
+                    <ul class="num" style="padding:0; margin:0; list-style:none;">
+                    </ul>
+
+                    <div class="btn btn_l">&lt;</div>
+                    <div class="btn btn_r">&gt;</div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header card-header-inverse card-header-danger">
+                        <div class="font-weight-bold">
+                            <span>预测分析1</span>
+                            <span class="pull-right">$1.890,65</span>
+                        </div>
+                        <div>
+                                        <span>
+                                            <small>Today 6:43 AM</small>
+                                        </span>
+                                        <span class="pull-right">
+                                            <small>+432,50 (15,78%)</small>
+                                        </span>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas class="chart-7-2 chart chart-line" height="38"></canvas>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas class="chart-8-2 chart chart-bar" height="38"></canvas>
+                        </div>
+                    </div>
+                    <div class="card-block p-y-1 p-x-2">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <strong>+$780,98</strong>
+                                <br>
+                                            <span class="text-muted">
+                                                <small>Weekly change</small>
+                                            </span>
+                            </div>
+                            <div class="col-xs-7 p-a-0">
+                                <div class="chart-wrapper">
+                                    <canvas class="chart-9-2 chart chart-bar pull-right" height="44" width="130" style="margin-top:-7px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-block p-y-0 p-x-2 b-t-1">
+                        <div class="row">
+                            <div class="col-xs-6 b-r-1 p-y-1">
+                                <div class="font-weight-bold">9.127</div>
+                                <div class="text-muted">
+                                    <small>Deals</small>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 p-y-1 text-xs-right">
+                                <div class="font-weight-bold">$189.783,87</div>
+                                <div class="text-muted">
+                                    <small>Total Income</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card card-inverse card-danger">
+                    <div class="card-header">
+                        预测分析2
+                    </div>
+                    <div class="card-block">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscsd.ajs
+                        dkjjjjjj,asdoiajd,asd, elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        Ut wisi enim ad minim veniam, quis nostrud exerci tatio
+                        n ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                        consequat.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+<footer id="footer">
+            <span class="text-left">
+                <a href="http://www.anyquant.net">AnyQuant</a>&nbsp;2016
+            </span>
+            <span class="pull-right">
+                Powered by <a href="http://genesisui.com">GenesisUI</a>
+            </span>
+</footer>
+<!-- Bootstrap and necessary plugins -->
+<!-- Bootstrap and necessary plugins -->
+<script src="assets/js/libs/tether.min.js"></script>
+<script src="assets/js/libs/bootstrap.min.js"></script>
+<!--<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+<script src="assets/js/libs/pace.min.js"></script>
+<!-- Plugins and scripts required by all views -->
+<script src="assets/js/libs/Chart.min.js"></script>
+<script src="assets/js/views/shared.js"></script>
+<!-- GenesisUI main scripts -->
+<script src="assets/js/app.js"></script>
+<!-- Plugins and scripts required by this views -->
+<script src="assets/js/libs/toastr.min.js"></script>
+<script src="assets/js/libs/gauge.min.js"></script>
+<script src="assets/js/libs/moment.min.js"></script>
+<script src="assets/js/libs/daterangepicker.min.js"></script>
+<!-- Custom scripts required by this view -->
+
+<script src="assets/js/views/main.js"></script>
+<script src="assets/js/views/widgets.js"></script>
+<!--<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">-->
+
+</body>
+</html>

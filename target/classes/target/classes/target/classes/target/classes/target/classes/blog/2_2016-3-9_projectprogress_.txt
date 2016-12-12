@@ -1,0 +1,5 @@
+group name:GoldenBullet
+when:第二周
+what:完成迭代一用例文档、需求规格说明、测试文档、软件架构设计，完成系统架构以及数据层和逻辑层的开发
+todo:完成迭代一的编程和测试，完成迭代二项目计划文档，准备迭代二的开发
+problem:对界面采用swing还是javafx不确定

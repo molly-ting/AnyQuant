@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta http-equiv="Cache-Control" content="private">
+<title data-react-helmet="true">AnyQuant</title>
+<!--<meta data-react-helmet="true" name="description" content="A platform for building serverless apps.-->
+<!--Increase productivity, focus on new features, and scale to millions of users without managing servers.-->
+<!--Get started for free!"><meta data-react-helmet="true" name="mixpanelTitle" content="Home">-->
+<!--<meta data-react-helmet="true" property="og:title" content="Build powerful apps in half the time | Syncano">-->
+<!--<meta data-react-helmet="true" property="og:url" content="http://www.syncano.io/">-->
+<!--<meta data-react-helmet="true" name="og:image" content="https://www.syncano.io//og-image-92a935337e7674e58dc6ce580dc0b86d.png">-->
+<!--<meta data-react-helmet="true" name="twitter:title" content="Build powerful apps in half the time | Syncano"><meta data-react-helmet="true" name="twitter:description" content="A platform for building serverless apps. Increase productivity, focus on new features, and scale-->
+          <!--to millions of users without managing servers. Get started for free!">-->
+          <!--<meta data-react-helmet="true" name="twitter:image" content="https://www.syncano.io//twitter-image-5d360965ff871ccb75c54f563672cc84.png">-->
+  <link href="assets/css/introducestyle.css" rel="stylesheet">
+  <!--<link rel="preload" href="/close-ef86416d1e397623a5e2a5b3ef2abc12.svg">-->
+  <!--<link rel="preload" href="/close-small-b301dbf84539c751d63a97c2cf4e04c0.svg">-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/plugins/line-numbers/prism-line-numbers.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism-twilight.min.css">
+  <!--<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57-1197b1e01ecfdbaefb4d052c86260269.png"><link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60-c19982fe5352fd979c04e0ffff9a9131.png"><link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72-1f6cb9f00ece474bf285073d29432533.png"><link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76-9e0988e7daa942dfc7494ae35b28656d.png"><link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114-536d6e3607f5d756b6114b2fee5519eb.png"><link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-7f8bc01d823ddbba427ea9afc14acec4.png"><link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144-fe713580d6bbed563a598516e2cb0338.png"><link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152-85ceff3c38e2dd7a7fe02aab80c2e621.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180-5a8daf366185667dc3afdadc5489fc26.png"><link rel="icon" type="image/png" href="/favicon-32x32-34c7ed711f3a015c98d3914d16be2eae.png" sizes="32x32"><link rel="icon" type="image/png" href="/android-chrome-192x192-ae8605c5a341fb10de50081d39d7ebb8.png" sizes="192x192"><link rel="icon" type="image/png" href="/favicon-96x96-44548d82d6fd3b36eb39e316cb380a37.png" sizes="96x96"><link rel="icon" type="image/png" href="/favicon-16x16-f145c2bb8789b55a596c3ec7e803b945.png" sizes="16x16">-->
+  <link rel="manifest" href="/e6688b81b48f734c551fb19b68b6c6c2.json">
+  <!--<link rel="mask-icon" href="/safari-pinned-tab-68615ec7af26e8a5dd8f22afddf42100.svg" color="#0070D3">-->
+  <meta name="msapplication-TileColor" content="#0070D3">
+  <!--<meta name="msapplication-TileImage" content="/mstile-144x144-7f02df3a785412ef31e956ac6f8d78f0.png">-->
+  <meta name="theme-color" content="#0070D3">
+  <meta name="msapplication-navbutton-color" content="#0070D3">
+  <!--<meta property="og:site_name" content="Syncano">-->
+  <!--<meta property="og:type" content="website">-->
+  <!--<meta name="twitter:card" content="summary_large_image">-->
+  <!--<meta name="twitter:site" content="@Syncano">-->
+  <!--<script type="text/javascript" async="" src="http://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>-->
+  <!--<script type="text/javascript" async="" src="http://scripts.kissmetrics.com/045a457739189d54c771b48767567ad6f9ebda90.2.js"></script>-->
+  <!--<script type="text/javascript" async="" src="https://widget.intercom.io/widget/nltbyutk"></script>-->
+  <!--<script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>-->
+  <!--<script type="text/javascript" async="" src="http://connect.facebook.net/en_US/fbevents.js"></script>-->
+  <!--<script type="text/javascript" async="" src="http://www.googleadservices.com/pagead/conversion_async.js"></script>-->
+  <!--<script type="text/javascript" async="" src="http://cdn.segment.com/analytics.js/v1/fLDtpYXRjFYnHlp1gvzl4I3Gv8gDoQ8m/analytics.min.js"></script>-->
+  <!--<script src="https://cdn.optimizely.com/js/3962180131.js"></script>-->
+  <!--<script>-->
+            <!--(function(h,o,t,j,a,r){-->
+            <!--h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};-->
+            <!--h._hjSettings={hjid:108213,hjsv:5};-->
+            <!--a=o.getElementsByTagName('head')[0];-->
+            <!--r=o.createElement('script');r.async=1;-->
+            <!--r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;-->
+            <!--a.appendChild(r);-->
+            <!--})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');-->
+          <!--</script><script async="" src="//static.hotjar.com/c/hotjar-108213.js?sv=5"></script><script src="https://script.hotjar.com/modules-09b4dbe96763521218bd719171fd39a3.js"></script>-->
+</head>
+<body>
+<div id="react-mount"><div data-reactroot="" data-reactid="1" data-react-checksum="1460335185">
+  <div class="headroom-wrapper" data-reactid="2">
+    <div class="headroom headroom--unfixed" id="3">
+      <div class="inner" data-reactid="4">
+      <div class="top-bar__logo" data-reactid="5">
+        <!--<a href="/" data-reactid="6">-->
+          <a>AnyQuant
+        <!--<img src="/logo-37af470ccfe1d8f198f757ed0cccc80c.svg" alt="Syncano Logo" data-reactid="7">-->
+        <!--<img class="white" src="/logo-white-941ad8f3a673dbd8ed0e3839ecb58f8d.svg" alt="Syncano Logo" data-reactid="8">-->
+        </a>
+      </div>
+      <nav class="top-bar__nav" data-reactid="9">
+        <!--<div class="top-bar__nav__hamburger" data-reactid="10">-->
+          <!--<img src="/hamburger-de744c32563859e5089d6a9f47396037.svg" alt="hamburger icon" data-reactid="11">-->
+          <!--<img class="close" src="/close-a035affcea86e3dfbf1e85d96bdc95e9.svg" alt="hamburger icon" data-reactid="12">-->
+        <!--</div>-->
+        <div class="top-bar__nav__menu" data-reactid="13">
+          <ul data-reactid="14">
+          <li data-reactid="15">
+            <a class="button button--noborder" href="#link" data-reactid="16">首页</a>
+          </li>
+          <li data-reactid="17">
+          <a class="button button--noborder" href="#features" data-reactid="18">特征</a>
+          </li>
+          <li data-reactid="19">
+            <a class="button button--noborder" href="#team" data-reactid="20">团队</a>
+          </li>
+            <!--<li data-reactid="21">-->
+              <!--<a class="button button&#45;&#45;noborder" href="/help/" data-reactid="22">帮助</a>-->
+            <!--</li>-->
+            <!--<li data-reactid="23">-->
+              <!--<span class="button button&#45;&#45;noborder" data-reactid="24">Log In</span>-->
+            <!--</li>-->
+            <!--<li data-reactid="25">-->
+              <!--<span class="button top-bar__nav__menu__cta" data-reactid="26">Sign Up For Free</span>-->
+            <!--</li>-->
+          </ul>
+        </div>
+      </nav>
+    </div>
+      <script type="text/javascript">
+          window.onscroll = function(){
+            var obj = document.getElementById("3");
+            var height = obj.offsetTop;
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if(scrollTop > height){
+              obj.className = 'headroom headroom--unpinned headroom--scrolled';
+            }else{
+              obj.className = "headroom headroom--unfixed";
+            }
+          }
+      </script>
+      <nav class="hamburger-menu" data-reactid="27">
+        <div class="inner" data-reactid="28">
+          <div class="hamburger-menu__menu" data-reactid="29">
+            <ul data-reactid="30">
+              <li data-reactid="31">
+              <a href="#link" data-reactid="32">首页</a>
+            </li>
+              <li data-reactid="33">
+                <a href="#features" data-reactid="34">特征</a>
+              </li>
+              <li data-reactid="35">
+                <a href="#team" data-reactid="36">团队</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger-menu__buttons" data-reactid="39">
+            <ul data-reactid="40">
+              <!--<li data-reactid="41">-->
+                <!--<span class="button button&#45;&#45;large" data-reactid="42">Log In</span>-->
+              <!--</li>-->
+              <!--<li data-reactid="43">-->
+                <!--<span class="button button&#45;&#45;large button&#45;&#45;featured" data-reactid="44">Sign Up For Free</span>-->
+              <!--</li>-->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="wrapper" id="link" data-reactid="45">
+    <div data-reactid="46"><!-- react-empty: 47 -->
+      <div class="hero" data-reactid="48">
+        <div class="inner" data-reactid="49">
+          <div class="hero__text" data-reactid="50">
+            <h1 data-reactid="51">
+              <span data-reactid="52">
+                量化交易管家
+              <br data-reactid="54">
+            </span>
+            </h1>
+            <h2 data-reactid="56">专注预测，专注打分，专注量化交易
+            </h2>
+            <div class="hero__text__button-container" data-reactid="57">
+              <span class="button button--large button--featured" data-reactid="58">Get Started</span>
+              <!--<p class="hero__text__button-description" data-reactid="59">6 months free • No credit card required</p>-->
+            </div>
+          </div>
+          <div class="hero__image" data-reactid="60">
+            <p>web URL<a href="">链接1</a></p>
+            <p>GitHub URL<a href="">链接2</a></p>
+            <!--<img src="/build-powerful-apps-in-half-the-time-cdd2ae17f816417eb5623ceb859330e6.svg" alt="serverless app platform" data-reactid="61">-->
+          </div>
+        </div>
+      </div>
+      <!--<div class="text-with-bottom-image text-with-bottom-image&#45;&#45;no-bottom-padding text-with-bottom-image&#45;&#45;gray" data-reactid="62">-->
+        <!--<div class="inner inner&#45;&#45;text-with-bottom-image" data-reactid="63">-->
+          <!--<h2 data-reactid="64">-->
+            <!--<span data-reactid="65">-->
+              <!--<br data-reactid="67">-->
+            <!--</span>-->
+          <!--</h2>-->
+          <!--<p data-reactid="69">-->
+
+          <!--</p>-->
+        <!--</div>-->
+        <!--<div class="inner" data-reactid="70">-->
+          <!--<picture data-reactid="71">-->
+            <!--&lt;!&ndash;<source media="(min-width: 321px)" srcset="/a-serverless-app-platform-to-design-publish-and-manage-your-api-small-d3efe3573e143c88348d0ebd455a8ccc.jpg 1x, /a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x-456c4b747b33eb161b0585a324a5065a.jpg 2x" data-reactid="72"><source srcset="/a-serverless-app-platform-to-design-publish-and-manage-your-api-e0bed917c49f701575e97b7754a58bb6.jpg 1x, /a-serverless-app-platform-to-design-publish-and-manage-your-api@2x-5fe07cfa64dd3e1d41d45368a309693c.jpg 2x" data-reactid="73"><img class="browser-image browser-image&#45;&#45;no-bottom-radius browser-image&#45;&#45;dark" src="/a-serverless-app-platform-to-design-publish-and-manage-your-api-small@2x-456c4b747b33eb161b0585a324a5065a.jpg" alt="Create and manage your API from our dashboard" data-reactid="74">&ndash;&gt;-->
+          <!--</picture>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="text-with-image" data-reactid="75">-->
+        <!--<div class="inner" data-reactid="76"><div class="text-with-image__image" data-reactid="77">-->
+          <!--<div class="text-with-image__image__inner" data-reactid="78">-->
+            <!--<img src="/assemble-your-backend-with-building-blocks-a668b8db3d206eb17bf9346cb4dbb4ec.svg" alt="Assemble your backend with building blocks" data-reactid="79">-->
+          <!--</div>-->
+        <!--</div>-->
+          <!--<div class="text-with-image__text" data-reactid="80">-->
+            <!--<h2 data-reactid="81">Assemble your backend with building blocks-->
+            <!--</h2>-->
+            <!--<p data-reactid="82">Simplify your stack. Piece together one or multiple features as building blocks for your app. Use Syncano Sockets as a data hub and easily connect disparate backend system.</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="features-columns" id="features" data-reactid="83">
+        <div class="inner inner--features-columns" data-reactid="84">
+          <h2 data-reactid="85">AnyQuant能帮你...
+          </h2>
+          <div class="features-columns__columns" data-reactid="86">
+            <div class="features-columns__columns__column" data-reactid="87">
+              <div class="features-columns__columns__column__icon" data-reactid="88">
+                <!--<img src="/real-time-communication-caae66c44c7985232e035789ed79eeaa.svg" alt="Real-Time Communication" data-reactid="89">-->
+              </div>
+              <h3 data-reactid="90">预测大盘涨跌
+              </h3>
+              <p data-reactid="91">填空
+              </p>
+            </div>
+            <div class="features-columns__columns__column" data-reactid="92">
+              <div class="features-columns__columns__column__icon" data-reactid="93">
+                <!--<img src="/run-server-side-logic-in-the-cloud-150fea01460a2bf6cb2904f9bd2bcb8e.svg" alt="Run server-side logic in the cloud" data-reactid="94">-->
+              </div>
+              <h3 data-reactid="95">判断股票潜力
+              </h3>
+              <p data-reactid="96">填空
+              </p>
+            </div>
+            <div class="features-columns__columns__column" data-reactid="97">
+              <div class="features-columns__columns__column__icon" data-reactid="98">
+                <!--<img src="/add-push-notifications-b7a9ab04d04a9c62b5c2a43d893a1e7d.svg" alt="Add push notifications" data-reactid="99">-->
+              </div>
+              <h3 data-reactid="100">模拟真实交易
+              </h3>
+              <p data-reactid="101">填空
+              </p>
+            </div>
+            <div class="features-columns__columns__column" data-reactid="102">
+              <div class="features-columns__columns__column__icon" data-reactid="103">
+                <!--<img src="/customize-your-output-13c6300e8c1c49000e9102935cdaeeec.svg" alt="Customize your output" data-reactid="104">-->
+              </div>
+              <h3 data-reactid="105">制定买卖策略
+              </h3>
+              <p data-reactid="106">填空
+              </p>
+            </div>
+          </div>
+          <footer class="features-columns__footer" data-reactid="107">
+            <!--<a class="button" href="/features/" data-reactid="108">View All Features-->
+            <!--</a>-->
+          </footer>
+        </div>
+      </div>
+      <div class="twitter-slider" data-reactid="109">
+        <div class="inner" data-reactid="110" style="white-space: nowrap;">
+          <h2 data-reactid="111">
+            <!--<img src="/heart-99471acb3d7488ab02c0421dad851a18.svg" alt="heart" data-reactid="112">-->
+            <span data-reactid="113">团队成员
+            </span>
+          </h2>
+          <div class="teamblock" style="left: -15%;">
+            <strong>庞云奎</strong>
+            <p>组长<br>负责数据层<br>和逻辑层</p>
+          </div>
+          <div class="teamblock" style="left: -5%;">
+            <strong>裴玉林</strong>
+            <p>组员<br>负责数据层<br>和逻辑层</p>
+          </div>
+          <div class="teamblock" style="left: 5%;">
+            <strong>何梦婷</strong>
+            <p>组员<br>负责界面层<br>偶尔客串其它层</p>
+          </div>
+          <div class="teamblock" style="left: 15%;">
+            <strong>卢海龙</strong>
+            <p>组员<br>负责界面层<br>和帅</p>
+          </div>
+          <!--<div class="twitter-slider__slider" data-reactid="114">-->
+            <!--<div class="slider-wrapper" data-reactid="115">-->
+              <!--<div class="slick-initialized slick-slider" data-reactid="116">-->
+                <!--<div class="slick-list" data-reactid="117">-->
+                  <!--<div class="slick-track" data-reactid="118">-->
+                    <!--&lt;!&ndash;<div data-index="-3" class="slick-slide slick-active slick-cloned" data-reactid="119">&ndash;&gt;-->
+                      <!--&lt;!&ndash;<div class="twitter-widget" data-reactid="120">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a class="twitter-widget__header" href="https://twitter.com/karthikjai" target="_blank" data-reactid="121">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="twitter-widget__header__avatar" data-reactid="122">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="//pbs.twimg.com/profile_images/1268842501/karthik_normal.jpg" alt="Karthik Jayakumar" data-reactid="123">&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;<div class="twitter-widget__header__user" data-reactid="124">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<strong data-reactid="125">Karthik Jayakumar&ndash;&gt;-->
+                            <!--&lt;!&ndash;</strong>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="twitter-widget__header__user__username" data-reactid="126">&lt;!&ndash; react-text: 127 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 128 &ndash;&gt;karthikjai&lt;!&ndash; /react-text &ndash;&gt;</div>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="twitter-widget__content" data-reactid="129">&ndash;&gt;-->
+                          <!--&lt;!&ndash;<p data-reactid="130">Just spent a few minutes trying out&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="https://twitter.com/syncano" target="_blank" rel="noopener noreferrer">@syncano</a> . Nice!&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="https://twitter.com/hashtag/MBaaS" target="_blank" rel="noopener noreferrer">#MBaaS</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="https://twitter.com/hashtag/BaaS" target="_blank" rel="noopener noreferrer">#BaaS</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="https://twitter.com/hashtag/cloud" target="_blank" rel="noopener noreferrer">#cloud</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="https://twitter.com/hashtag/mobile" target="_blank" rel="noopener noreferrer">#mobile</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="https://twitter.com/hashtag/iOS" target="_blank" rel="noopener noreferrer">#iOS</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="https://twitter.com/hashtag/android" target="_blank" rel="noopener noreferrer">#android</a>&ndash;&gt;-->
+                          <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--<div style="position:relative;left: 15%;">-->
+                      <!--<strong>庞云奎</strong>-->
+                      <!--<p>组长<br>负责数据层和逻辑层-->
+                    <!--</div>-->
+                    <!--<div data-index="-2" class="slick-slide slick-cloned" data-reactid="131">-->
+                      <!--<div class="twitter-widget" data-reactid="132">-->
+                        <!--<a class="twitter-widget__header" href="https://twitter.com/BizziBodyDotCom" target="_blank" data-reactid="133">-->
+                          <!--<div class="twitter-widget__header__avatar" data-reactid="134">-->
+                            <!--&lt;!&ndash;<img src="//pbs.twimg.com/profile_images/754067937632329728/1s7-JI1v_normal.jpg" alt="Bizzi Body" data-reactid="135">&ndash;&gt;-->
+                          <!--</div>-->
+                          <!--<div class="twitter-widget__header__user" data-reactid="136">-->
+                            <!--<strong data-reactid="137">庞云奎</strong>-->
+                            <!--<div class="twitter-widget__header__user__username" data-reactid="138"></div>-->
+                          <!--</div>-->
+                        <!--</a>-->
+                        <!--<div class="twitter-widget__content" data-reactid="141">-->
+                          <!--<p data-reactid="142">组长<br>负责数据层和逻辑层-->
+                            <!--&lt;!&ndash;<a href="https://t.co/pMW4qn1Ly6" target="_blank" rel="noopener noreferrer">t.co/pMW4qn1Ly6</a>&ndash;&gt;-->
+                          <!--</p>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div data-index="-1" class="slick-slide slick-cloned" data-reactid="143">-->
+                      <!--<div class="twitter-widget" data-reactid="144"><a class="twitter-widget__header" href="https://twitter.com/ReventadorGames" target="_blank" data-reactid="145">-->
+                        <!--<div class="twitter-widget__header__avatar" data-reactid="146">-->
+                          <!--<img src="//pbs.twimg.com/profile_images/730430252837527554/7HsMqCZv_normal.jpg" alt="Thomas Webb" data-reactid="147">-->
+                        <!--</div>-->
+                        <!--<div class="twitter-widget__header__user" data-reactid="148">-->
+                          <!--<strong data-reactid="149">Thomas Webb</strong>-->
+                          <!--<div class="twitter-widget__header__user__username" data-reactid="150">&lt;!&ndash; react-text: 151 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 152 &ndash;&gt;ReventadorGames&lt;!&ndash; /react-text &ndash;&gt;</div>-->
+                        <!--</div>-->
+                      <!--</a>-->
+                        <!--<div class="twitter-widget__content" data-reactid="153">-->
+                          <!--<p data-reactid="154">So awesome, moved all my in game variables onto the-->
+                            <!--<a href="https://twitter.com/Syncano" target="_blank" rel="noopener noreferrer">@Syncano</a> real-time platform. Can edit all game variables on the fly-->
+                            <!--<a href="https://twitter.com/hashtag/GameMaker" target="_blank" rel="noopener noreferrer">#GameMaker</a>-->
+                            <!--<a href="https://twitter.com/hashtag/GameDev" target="_blank" rel="noopener noreferrer">#GameDev</a>-->
+                          <!--</p>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div data-index="0" class="slick-slide slick-active slick-cloned" data-reactid="155"><div class="twitter-widget" data-reactid="156"><a class="twitter-widget__header" href="https://twitter.com/sirvonthomas" target="_blank" data-reactid="157"><div class="twitter-widget__header__avatar" data-reactid="158"><img src="//pbs.twimg.com/profile_images/554429670872317952/BM6nW0yb_normal.jpeg" alt="SIRVON" data-reactid="159"></div><div class="twitter-widget__header__user" data-reactid="160"><strong data-reactid="161">SIRVON</strong><div class="twitter-widget__header__user__username" data-reactid="162">&lt;!&ndash; react-text: 163 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 164 &ndash;&gt;sirvonthomas&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="165"><p data-reactid="166">damn <a href="https://twitter.com/syncano" target="_blank" rel="noopener noreferrer">@syncano</a> yall bout to make me flip up alot of my apps backend infrastructure...this service looks sexy!</p></div></div></div><div data-index="1" class="slick-slide slick-active slick-cloned" data-reactid="167"><div class="twitter-widget" data-reactid="168"><a class="twitter-widget__header" href="https://twitter.com/DevJoshLopez" target="_blank" data-reactid="169"><div class="twitter-widget__header__avatar" data-reactid="170"><img src="//pbs.twimg.com/profile_images/668928004362362880/ApIUQh5M_normal.jpg" alt="Josh Lopez" data-reactid="171"></div><div class="twitter-widget__header__user" data-reactid="172"><strong data-reactid="173">Josh Lopez</strong><div class="twitter-widget__header__user__username" data-reactid="174">&lt;!&ndash; react-text: 175 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 176 &ndash;&gt;DevJoshLopez&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="177"><p data-reactid="178"><a href="https://twitter.com/FawazShak" target="_blank" rel="noopener noreferrer">@FawazShak</a> I'm liking <a href="https://twitter.com/Syncano" target="_blank" rel="noopener noreferrer">@Syncano</a>. Their support exceeds everyone I've ever dealt with.</p></div></div></div><div data-index="2" class="slick-slide slick-active slick-cloned" data-reactid="179"><div class="twitter-widget" data-reactid="180"><a class="twitter-widget__header" href="https://twitter.com/karthikjai" target="_blank" data-reactid="181"><div class="twitter-widget__header__avatar" data-reactid="182"><img src="//pbs.twimg.com/profile_images/1268842501/karthik_normal.jpg" alt="Karthik Jayakumar" data-reactid="183"></div><div class="twitter-widget__header__user" data-reactid="184"><strong data-reactid="185">Karthik Jayakumar</strong><div class="twitter-widget__header__user__username" data-reactid="186">&lt;!&ndash; react-text: 187 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 188 &ndash;&gt;karthikjai&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="189"><p data-reactid="190">Just spent a few minutes trying out <a href="https://twitter.com/syncano" target="_blank" rel="noopener noreferrer">@syncano</a> . Nice! <a href="https://twitter.com/hashtag/MBaaS" target="_blank" rel="noopener noreferrer">#MBaaS</a> <a href="https://twitter.com/hashtag/BaaS" target="_blank" rel="noopener noreferrer">#BaaS</a> <a href="https://twitter.com/hashtag/cloud" target="_blank" rel="noopener noreferrer">#cloud</a> <a href="https://twitter.com/hashtag/mobile" target="_blank" rel="noopener noreferrer">#mobile</a> <a href="https://twitter.com/hashtag/iOS" target="_blank" rel="noopener noreferrer">#iOS</a> <a href="https://twitter.com/hashtag/android" target="_blank" rel="noopener noreferrer">#android</a></p></div></div></div><div data-index="3" class="slick-slide slick-cloned" data-reactid="191"><div class="twitter-widget" data-reactid="192"><a class="twitter-widget__header" href="https://twitter.com/BizziBodyDotCom" target="_blank" data-reactid="193"><div class="twitter-widget__header__avatar" data-reactid="194"><img src="//pbs.twimg.com/profile_images/754067937632329728/1s7-JI1v_normal.jpg" alt="Bizzi Body" data-reactid="195"></div><div class="twitter-widget__header__user" data-reactid="196"><strong data-reactid="197">Bizzi Body</strong><div class="twitter-widget__header__user__username" data-reactid="198">&lt;!&ndash; react-text: 199 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 200 &ndash;&gt;BizziBodyDotCom&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="201"><p data-reactid="202">It's great to see this platform growing - it's really worth some minutes of your time to investigate. <a href="https://t.co/pMW4qn1Ly6" target="_blank" rel="noopener noreferrer">t.co/pMW4qn1Ly6</a></p></div></div></div><div data-index="4" class="slick-slide slick-cloned" data-reactid="203"><div class="twitter-widget" data-reactid="204"><a class="twitter-widget__header" href="https://twitter.com/ReventadorGames" target="_blank" data-reactid="205"><div class="twitter-widget__header__avatar" data-reactid="206"><img src="//pbs.twimg.com/profile_images/730430252837527554/7HsMqCZv_normal.jpg" alt="Thomas Webb" data-reactid="207"></div><div class="twitter-widget__header__user" data-reactid="208"><strong data-reactid="209">Thomas Webb</strong><div class="twitter-widget__header__user__username" data-reactid="210">&lt;!&ndash; react-text: 211 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 212 &ndash;&gt;ReventadorGames&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="213"><p data-reactid="214">So awesome, moved all my in game variables onto the <a href="https://twitter.com/Syncano" target="_blank" rel="noopener noreferrer">@Syncano</a> real-time platform. Can edit all game variables on the fly <a href="https://twitter.com/hashtag/GameMaker" target="_blank" rel="noopener noreferrer">#GameMaker</a> <a href="https://twitter.com/hashtag/GameDev" target="_blank" rel="noopener noreferrer">#GameDev</a></p></div></div></div><div data-index="5" class="slick-slide slick-active slick-cloned" data-reactid="215"><div class="twitter-widget" data-reactid="216"><a class="twitter-widget__header" href="https://twitter.com/sirvonthomas" target="_blank" data-reactid="217"><div class="twitter-widget__header__avatar" data-reactid="218"><img src="//pbs.twimg.com/profile_images/554429670872317952/BM6nW0yb_normal.jpeg" alt="SIRVON" data-reactid="219"></div><div class="twitter-widget__header__user" data-reactid="220"><strong data-reactid="221">SIRVON</strong><div class="twitter-widget__header__user__username" data-reactid="222">&lt;!&ndash; react-text: 223 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 224 &ndash;&gt;sirvonthomas&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="225"><p data-reactid="226">damn <a href="https://twitter.com/syncano" target="_blank" rel="noopener noreferrer">@syncano</a> yall bout to make me flip up alot of my apps backend infrastructure...this service looks sexy!</p></div></div></div><div data-index="6" class="slick-slide slick-active slick-cloned" data-reactid="227"><div class="twitter-widget" data-reactid="228"><a class="twitter-widget__header" href="https://twitter.com/DevJoshLopez" target="_blank" data-reactid="229"><div class="twitter-widget__header__avatar" data-reactid="230"><img src="//pbs.twimg.com/profile_images/668928004362362880/ApIUQh5M_normal.jpg" alt="Josh Lopez" data-reactid="231"></div><div class="twitter-widget__header__user" data-reactid="232"><strong data-reactid="233">Josh Lopez</strong><div class="twitter-widget__header__user__username" data-reactid="234">&lt;!&ndash; react-text: 235 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 236 &ndash;&gt;DevJoshLopez&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="237"><p data-reactid="238"><a href="https://twitter.com/FawazShak" target="_blank" rel="noopener noreferrer">@FawazShak</a> I'm liking <a href="https://twitter.com/Syncano" target="_blank" rel="noopener noreferrer">@Syncano</a>. Their support exceeds everyone I've ever dealt with.</p></div></div></div><div data-index="7" class="slick-slide slick-active slick-cloned" data-reactid="239"><div class="twitter-widget" data-reactid="240"><a class="twitter-widget__header" href="https://twitter.com/karthikjai" target="_blank" data-reactid="241"><div class="twitter-widget__header__avatar" data-reactid="242"><img src="//pbs.twimg.com/profile_images/1268842501/karthik_normal.jpg" alt="Karthik Jayakumar" data-reactid="243"></div><div class="twitter-widget__header__user" data-reactid="244"><strong data-reactid="245">Karthik Jayakumar</strong><div class="twitter-widget__header__user__username" data-reactid="246">&lt;!&ndash; react-text: 247 &ndash;&gt;@&lt;!&ndash; /react-text &ndash;&gt;&lt;!&ndash; react-text: 248 &ndash;&gt;karthikjai&lt;!&ndash; /react-text &ndash;&gt;</div></div></a><div class="twitter-widget__content" data-reactid="249"><p data-reactid="250">Just spent a few minutes trying out <a href="https://twitter.com/syncano" target="_blank" rel="noopener noreferrer">@syncano</a> . Nice! <a href="https://twitter.com/hashtag/MBaaS" target="_blank" rel="noopener noreferrer">#MBaaS</a> <a href="https://twitter.com/hashtag/BaaS" target="_blank" rel="noopener noreferrer">#BaaS</a> <a href="https://twitter.com/hashtag/cloud" target="_blank" rel="noopener noreferrer">#cloud</a> <a href="https://twitter.com/hashtag/mobile" target="_blank" rel="noopener noreferrer">#mobile</a> <a href="https://twitter.com/hashtag/iOS" target="_blank" rel="noopener noreferrer">#iOS</a> <a href="https://twitter.com/hashtag/android" target="_blank" rel="noopener noreferrer">#android</a></p></div></div></div></div></div><span data-role="none" class="slick-prev" style="display:block;" data-reactid="251"><img src="/left-30c392514f2501805aca8271272c1a88.svg" alt="prev slide" data-reactid="252"></span><span data-role="none" class="slick-next" style="display:block;" data-reactid="253"><img src="/right-9b909a21b29fbc40ee843d8abc695301.svg" alt="next slide" data-reactid="254"></span></div></div></div><a class="button button&#45;&#45;white" href="https://twitter.com/syncanolove/" target="_blank" data-reactid="255">More Tweets</a>-->
+        </div>
+      </div>
+      <!--<div class="platforms-section" data-reactid="256">
+        <div class="inner" data-reactid="257">
+          <h2 data-reactid="258">Use the frameworks and languages you like</h2><div class="platforms" data-reactid="259"><div class="platforms__row" data-reactid="260"><a class="platforms__row__item javascript" href="https://github.com/Syncano/syncano-js/" target="_blank" title="View our JavaScript library" data-reactid="261"><img src="/javascript-c87b8a0d4f8e9c749f644ac08169a45b.svg" alt="JavaScript" data-reactid="262"></a><a class="platforms__row__item python" href="https://github.com/Syncano/syncano-python/" target="_blank" title="View our Python library" data-reactid="263"><img src="/python-1f5a30617fc6155df65d406aab227a65.svg" alt="Python" data-reactid="264"></a><a class="platforms__row__item android" href="https://github.com/Syncano/syncano-android/" target="_blank" title="View our Android library" data-reactid="265"><img src="/android-85c2bf53b99d5a15256fae1646ee6588.svg" alt="Android" data-reactid="266"></a><a class="platforms__row__item swift" href="https://github.com/Syncano/syncano-ios/" target="_blank" title="View our iOS library" data-reactid="267"><img src="/ios@2x-1d4e2281e55b873affe5b9d511fda390.png" alt="iOS" data-reactid="268"></a></div><div class="platforms__row" data-reactid="269"><a class="platforms__row__item angularjs" href="https://github.com/Syncano/ng-syncano/" target="_blank" title="View our AngularJS library" data-reactid="270"><img src="/angularjs-79d8ee8a803c246bb583e71b117b58dc.svg" alt="AngularJS" data-reactid="271"></a><a class="platforms__row__item ruby" href="https://github.com/Syncano/syncano-ruby/" target="_blank" title="View our Ruby library" data-reactid="272"><img src="/ruby-538a33c36a459feb53acbf27bea59b3e.svg" alt="Ruby" data-reactid="273"></a><a class="platforms__row__item emberjs" href="https://github.com/Syncano/ember-syncano/" target="_blank" title="View our Ember.js library" data-reactid="274"><img src="/emberjs-820c79ee574c0372a0cf1845483d31b6.svg" alt="Ember.js" data-reactid="275"></a><a class="platforms__row__item arduino" href="https://github.com/Syncano/syncano-arduino/" target="_blank" title="View our Arduino library" data-reactid="276"><img src="/arduino-6c89e1bad3af7a8efff8aea390ddec88.svg" alt="Arduino" data-reactid="277"></a></div></div><h3 data-reactid="278">Add data with a few lines of code</h3><div class="code-preview code-preview&#45;&#45;no-bottom-radius" data-reactid="279"><nav class="code-preview__nav" data-reactid="280"><ul data-reactid="281"><li class="is-active" data-reactid="282">Javascript</li><li class="" data-reactid="283">Python</li><li class="" data-reactid="284">Android</li><li class="" data-reactid="285">Objective-C</li><li class="" data-reactid="286">Swift</li><li class="" data-reactid="287">AngularJS</li><li class="" data-reactid="288">Ruby</li><li class="" data-reactid="289">Ember</li><li class="" data-reactid="290">Arduino</li></ul></nav><div class="code-preview__content" data-reactid="291"><div data-reactid="292"><div class="code-preview__content__item code-preview__content__item&#45;&#45;is-active" data-reactid="293"><pre class="line-numbers language-javascript" data-reactid="294"><code class=" language-javascript" data-reactid="295"><span class="token keyword">var</span> Syncano <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"syncano"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// CommonJS</span>
+<span class="token keyword">var</span> connection <span class="token operator">=</span> <span class="token function">Syncano</span><span class="token punctuation">(</span><span class="token punctuation">{</span> accountKey<span class="token punctuation">:</span> <span class="token string">"ACCOUNT_KEY"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> DataObject <span class="token operator">=</span> connection<span class="token punctuation">.</span>DataObject<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> book <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span> <span class="token string">"The Old Man and the Sea"</span><span class="token punctuation">,</span> 
+  author<span class="token punctuation">:</span> <span class="token string">"Ernest Hemingway"</span><span class="token punctuation">,</span>
+  instanceName<span class="token punctuation">:</span> <span class="token string">"INSTANCE_NAME"</span><span class="token punctuation">,</span>
+  className<span class="token punctuation">:</span> <span class="token string">"CLASS_name"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+DataObject<span class="token punctuation">.</span><span class="token function">please</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"book"</span><span class="token punctuation">,</span> book<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="296"><div class="code-preview__content__item" data-reactid="297"><pre class="line-numbers language-python" data-reactid="298"><code class=" language-python" data-reactid="299"><span class="token keyword">import</span> syncano
+<span class="token keyword">from</span> syncano<span class="token punctuation">.</span>models <span class="token keyword">import</span> Object
+
+connection <span class="token operator">=</span> syncano<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>api_key<span class="token operator">=</span><span class="token string">'API_KEY'</span><span class="token punctuation">)</span>
+
+Object<span class="token punctuation">.</span>please<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+  instance_name<span class="token operator">=</span><span class="token string">"INSTANCE_NAME"</span><span class="token punctuation">,</span>
+  class_name<span class="token operator">=</span><span class="token string">"book"</span><span class="token punctuation">,</span>
+  title<span class="token operator">=</span><span class="token string">"The Old Man and the Sea"</span><span class="token punctuation">,</span>
+  author<span class="token operator">=</span><span class="token string">"Ernest Hemingway"</span>
+<span class="token punctuation">)</span>
+
+
+
+
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="300"><div class="code-preview__content__item" data-reactid="301"><pre class="line-numbers language-java" data-reactid="302"><code class=" language-java" data-reactid="303">Book newBook <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+newBook<span class="token punctuation">.</span>author <span class="token operator">=</span> <span class="token string">"Ernest Hemingway"</span><span class="token punctuation">;</span>
+newBook<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"The Old Man and the Sea"</span><span class="token punctuation">;</span>
+
+Response<span class="token operator">&lt;</span>Book<span class="token operator">&gt;</span> response <span class="token operator">=</span> newBook<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+
+
+
+
+
+
+
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="304"><div class="code-preview__content__item" data-reactid="305"><pre class="line-numbers language-objectivec" data-reactid="306"><code class=" language-objectivec" data-reactid="307"><span class="token comment" spellcheck="true">// define Class of an object</span>
+<span class="token keyword">@interface</span> Book <span class="token punctuation">:</span> SCDataObject
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span>copy<span class="token punctuation">)</span> NSString <span class="token operator">*</span>title<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span>copy<span class="token punctuation">)</span> NSString <span class="token operator">*</span>subtitle<span class="token punctuation">;</span>
+<span class="token keyword">@end</span>
+  
+<span class="token keyword">@implementation</span> Book
+<span class="token keyword">@end</span>
+  
+<span class="token comment" spellcheck="true">// creating a book using Book class</span>
+Book <span class="token operator">*</span>book <span class="token operator">=</span> <span class="token punctuation">[</span>Book new<span class="token punctuation">]</span><span class="token punctuation">;</span>
+book<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">@"How to be a Pirate"</span><span class="token punctuation">;</span>
+book<span class="token punctuation">.</span>subtitle <span class="token operator">=</span> <span class="token string">@"10 tips that will change your life."</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span>book saveWithCompletionBlock<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// handle error</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="308"><div class="code-preview__content__item" data-reactid="309"><pre class="line-numbers language-swift" data-reactid="310"><code class=" language-swift" data-reactid="311"><span class="token comment" spellcheck="true">// define Class of an object</span>
+<span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">:</span> <span class="token builtin">SCDataObject</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> title <span class="token operator">=</span> <span class="token string">""</span>
+    <span class="token keyword">var</span> subtitle <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// creating a book using Book class</span>
+<span class="token keyword">let</span> book <span class="token operator">=</span> <span class="token function">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+book<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"How to be a Pirate"</span>
+book<span class="token punctuation">.</span>subtitle <span class="token operator">=</span> <span class="token string">"10 tips that will change your life."</span>
+book<span class="token punctuation">.</span>saveWithCompletionBlock <span class="token punctuation">{</span> error <span class="token keyword">in</span>
+  <span class="token comment" spellcheck="true">// process saved book and handle error</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="312"><div class="code-preview__content__item" data-reactid="313"><pre class="line-numbers language-javascript" data-reactid="314"><code class=" language-javascript" data-reactid="315">myApp<span class="token punctuation">.</span><span class="token function">controller</span><span class="token punctuation">(</span><span class="token string">'SyncanoController'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>$scope<span class="token punctuation">,</span> syncanoService<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> syncano <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// will be used for API calls</span>
+  $scope<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  $scope<span class="token punctuation">.</span>error <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  &#8203;
+  syncanoService<span class="token punctuation">.</span><span class="token function">getSyncano</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// gets the current Syncano object</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// uses promises</span>
+      syncano <span class="token operator">=</span> res<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// set to current Syncano Object</span>
+      <span class="token keyword">var</span> DataObject <span class="token operator">=</span> syncano<span class="token punctuation">.</span>DataObject<span class="token punctuation">;</span>
+      <span class="token keyword">var</span> book <span class="token operator">=</span> <span class="token punctuation">{</span>
+        title<span class="token punctuation">:</span> <span class="token string">"The Old Man and the Sea"</span><span class="token punctuation">,</span> 
+        author<span class="token punctuation">:</span> <span class="token string">"Ernest Hemingway"</span><span class="token punctuation">,</span>
+        instanceName<span class="token punctuation">:</span> <span class="token string">"INSTANCE_NAME"</span><span class="token punctuation">,</span>
+        className<span class="token punctuation">:</span> <span class="token string">"CLASS_NAME"</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      DataObject<span class="token punctuation">.</span><span class="token function">please</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        $scope<span class="token punctuation">.</span>data <span class="token operator">=</span> book<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="316"><div class="code-preview__content__item" data-reactid="317"><pre class="line-numbers language-ruby" data-reactid="318"><code class=" language-ruby" data-reactid="319"><span class="token keyword">require</span> <span class="token string">'syncano'</span>
+
+book_class <span class="token operator">=</span> instance<span class="token punctuation">.</span>classes<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'book'</span><span class="token punctuation">)</span>
+book_class<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token string">'The Old Man and the Sea'</span><span class="token punctuation">,</span> author<span class="token punctuation">:</span> <span class="token string">'Ernest Hemingway'</span><span class="token punctuation">)</span>
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="320"><div class="code-preview__content__item" data-reactid="321"><pre class="line-numbers language-javascript" data-reactid="322"><code class=" language-javascript" data-reactid="323"><span class="token function">saveNewItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">createRecord</span><span class="token punctuation">(</span><span class="token string">'todo'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token string">'title'</span><span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'newItem'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'is_completed'</span><span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">'newItem'</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div><div data-reactid="324"><div class="code-preview__content__item" data-reactid="325"><pre class="line-numbers language-cpp" data-reactid="326"><code class=" language-cpp" data-reactid="327"><span class="token comment" spellcheck="true">/*
+ * In this example we will fetch data from Syncano and create Syncano Data Objects based on it
+ * To use this example you need Syncano class
+*/</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Syncano.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Bridge.h&gt;</span></span>
+&#8203;
+SyncanoClient<span class="token operator">*</span> syncano<span class="token punctuation">;</span>
+SyncanoClass<span class="token operator">*</span> classHolder<span class="token punctuation">;</span>
+SyncanoDataObject<span class="token operator">*</span> object<span class="token punctuation">;</span>
+&#8203;
+<span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">initSyncanoClient</span><span class="token punctuation">(</span><span class="token string">"ACCOUNT_KEY"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Bridge<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment" spellcheck="true">// setup Syncano client used to connect</span>
+  syncano <span class="token operator">=</span> <span class="token function">getSyncanoClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  syncano<span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">setInstanceName</span><span class="token punctuation">(</span><span class="token string">"INSTANCE_NAME"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment" spellcheck="true">// create local class and fetch fields from Syncano</span>
+  classHolder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">SyncanoClass</span><span class="token punctuation">(</span><span class="token string">"CLASS_NAME"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  classHolder<span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">details</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment" spellcheck="true">// initialize empty local object based on class</span>
+  object <span class="token operator">=</span> classHolder<span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">initObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+&#8203;
+<span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// Set value in local object</span>
+  object<span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">setFieldValue</span><span class="token punctuation">(</span><span class="token string">"firstname"</span><span class="token punctuation">,</span> <span class="token string">"john"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment" spellcheck="true">// Create Data Object in Syncano</span>
+  object<span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></div></div></div></div></div>-->
+      <!--<div class="text-with-background text-with-background&#45;&#45;image1" data-reactid="328"><div class="inner" data-reactid="329"><div class="text-with-background__text" data-reactid="330"><h2 data-reactid="331">We’ll support you every step of the way</h2><p data-reactid="332">Adam is a great guy and a part of our support team. At Syncano, every team member is here to help-->
+          <!--you. When you have questions, you’ll get timely answers directly from our team members.</p><a class="button" href="/help/" data-reactid="333">Get support</a></div></div></div>-->
+      <!--<div class="cta-section" data-reactid="334"><div class="inner" data-reactid="335"><div data-reactid="336"><h2 data-reactid="337">Rethink how you build apps. Go serverless!</h2><span class="button button&#45;&#45;large button&#45;&#45;featured" data-reactid="338">Get Started for Free</span><p class="cta-section__button-description" data-reactid="339">6 months free • No credit card required</p></div></div></div>-->
+      <footer class="footer" data-reactid="340" style="height: 20px;">
+        <div class="inner" data-reactid="341">
+          <span style="margin: 0 auto;">AnyQuant<br>@软院小分队</span>
+          <!--</br><span>@软院小分队</span>-->
+          <!--<div class="footer__logo" data-reactid="342">-->
+            <!--<a href="/" data-reactid="343">-->
+              <!--<img src="/logo-721b6cdfb3de2beb4b64308c9fd61a20.svg" alt="Syncano" data-reactid="344"></a>-->
+            <!--<div class="footer__logo__copyright" data-reactid="345">-->
+              <!--<p data-reactid="346">© 2016 Syncano. All Rights Reserved.</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="footer__columns" data-reactid="347">-->
+            <!--<div class="footer__column" data-reactid="348">-->
+              <!--<div class="footer__headline" data-reactid="349">Company-->
+              <!--</div>-->
+              <!--<ul data-reactid="350">-->
+                <!--<li data-reactid="351"><a href="/about/" data-reactid="352">About Us</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="353">-->
+                  <!--<a href="https://syncano.workable.com/" target="_blank" data-reactid="354">Jobs-->
+                  <!--</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="355">-->
+                  <!--<a href="/terms-of-service/" data-reactid="356">Terms of Service</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="357">-->
+                  <!--<a href="/terms-of-service/#privacy-policy" data-reactid="358">Privacy Policy</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="359">-->
+                  <!--<a href="/contact/" data-reactid="360">Contact Us</a>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="footer__column" data-reactid="361">-->
+              <!--<div class="footer__headline" data-reactid="362">Product-->
+              <!--</div>-->
+              <!--<ul data-reactid="363">-->
+                <!--<li data-reactid="364">-->
+                  <!--<a href="/features/" data-reactid="365">Features-->
+                  <!--</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="366">-->
+                  <!--<a href="/pricing/" data-reactid="367">Plans &amp; Pricing</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="368">-->
+                  <!--<a href="/help/" data-reactid="369">Help &amp; Status</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="370">-->
+                  <!--<a href="https://www.syncano.io/blog/" target="_blank" data-reactid="371">Blog-->
+                  <!--</a>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="footer__column" data-reactid="372">-->
+              <!--<div class="footer__headline" data-reactid="373">Resources-->
+              <!--</div>-->
+              <!--<ul data-reactid="374">-->
+                <!--<li data-reactid="375">-->
+                  <!--<a href="http://docs.syncano.io/docs/getting-started-with-syncano/" target="_blank" data-reactid="376">Getting Started</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="377">-->
+                  <!--<a href="http://docs.syncano.io/" target="_blank" data-reactid="378">Documentation</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="379">-->
+                  <!--<a href="http://docs.syncano.io/docs/syncano-libraries/" target="_blank" data-reactid="380">Libraries</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="381">-->
+                  <!--<a href="https://www.syncano.io/blog/tag/tutorials/" target="_blank" data-reactid="382">Tutorials</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="383">-->
+                  <!--<a href="http://docs.syncano.io/v0.1.1/docs/" target="_blank" data-reactid="384">API Reference</a>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="footer__column" data-reactid="385">-->
+              <!--<div class="footer__headline" data-reactid="386">Let’s connect-->
+              <!--</div>-->
+              <!--<ul data-reactid="387">-->
+                <!--<li data-reactid="388">-->
+                  <!--<a href="https://twitter.com/Syncano/" target="_blank" data-reactid="389">Twitter</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="390">-->
+                  <!--<a href="https://www.facebook.com/syncano/" target="_blank" data-reactid="391">Facebook</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="392">-->
+                  <!--<a href="https://github.com/Syncano/" target="_blank" data-reactid="393">GitHub</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="394">-->
+                  <!--<a href="http://www.syncano.io/slack-invite/" target="_blank" data-reactid="395">Slack</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="396">-->
+                  <!--<a href="https://www.linkedin.com/company/syncano/" target="_blank" data-reactid="397">LinkedIn</a>-->
+                <!--</li>-->
+                <!--<li data-reactid="398">-->
+                  <!--<a href="https://dribbble.com/SYNCANO/" target="_blank" data-reactid="399">Dribbble</a>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="footer__newsletter" data-reactid="400">
+            <div class="footer__headline" data-reactid="401">Get our serverless digest</div>
+            <div class="newsletter-form" data-reactid="402">
+              <form data-reactid="403"><div class="newsletter-form__field" data-reactid="404">
+                <input type="email" class="newsletter-form__field__input " name="email" placeholder="E-mail address" required="" data-reactid="405">
+                <button class="newsletter-form__field__button" data-reactid="406">Sign Up
+                </button>
+              </div>
+              </form>
+            </div>
+            <div class="footer__newsletter__social" data-reactid="407">
+              <div class="footer__headline" data-reactid="408">Let’s connect
+              </div>
+              <ul data-reactid="409">
+                <li data-reactid="410">
+                  <a href="https://twitter.com/Syncano/" target="_blank" title="Twitter" data-reactid="411">
+                    <img src="/twitter-74acead2b36feaab2c1b93131476780c.svg" alt="Twitter" data-reactid="412"></a>
+                </li>
+                <li data-reactid="413">
+                  <a href="https://www.facebook.com/syncano/" target="_blank" title="Facebook" data-reactid="414">
+                    <img src="/facebook-0dc305f9837d1daab6cb10666b98615f.svg" alt="Facebook" data-reactid="415"></a>
+                </li>
+                <li data-reactid="416">
+                  <a href="https://github.com/Syncano/" target="_blank" title="GitHub" data-reactid="417">
+                    <img src="/github-7d3b69934b83e508e6353785f7595127.svg" alt="GitHub" data-reactid="418"></a>
+                </li>
+                <li data-reactid="419">
+                  <a href="http://www.syncano.io/slack-invite/" target="_blank" title="Slack" data-reactid="420">
+                    <img src="/slack-7e4664b4e0c276f2ba504343e5edd4c9.svg" alt="Slack" data-reactid="421"></a>
+                </li>
+                <li data-reactid="422">
+                  <a href="https://www.linkedin.com/company/syncano/" target="_blank" title="LinkedIn" data-reactid="423">
+                    <img src="/linkedin-6413e3c2d9a624f17ca1a15a2fede7bf.svg" alt="LinkedIn" data-reactid="424"></a>
+                </li>
+                <li data-reactid="425">
+                  <a href="https://dribbble.com/SYNCANO/" target="_blank" title="Dribbble" data-reactid="426">
+                    <img src="/dribbble-ff44117767ea7773a03561d0ab110b98.svg" alt="Dribbble" data-reactid="427"></a>
+                </li>
+              </ul>
+            </div>
+          </div>-->
+          <!--<div class="footer__copyright" data-reactid="428">-->
+            <!--<p data-reactid="429">© 2016 Syncano. All Rights Reserved.</p>-->
+          <!--</div>-->
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div data-reactid="430">
+    <noscript data-reactid="431"></noscript>
+    <noscript data-reactid="432"></noscript>
+    <noscript data-reactid="433"></noscript>
+    <noscript data-reactid="434"></noscript>
+    <noscript data-reactid="435"></noscript></div></div></div>
+<!--<script type="text/javascript">-->
+    <!--!function(){-->
+      <!--var analytics=window.analytics=window.analytics||[];-->
+      <!--if(!analytics.initialize)-->
+        <!--if(analytics.invoked)-->
+          <!--window.console&&console.error&&console.error("Segment snippet included twice.");-->
+        <!--else{analytics.invoked=!0;-->
+          <!--analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];-->
+          <!--analytics.factory=function(t){-->
+            <!--return function(){-->
+              <!--var e=Array.prototype.slice.call(arguments);-->
+              <!--e.unshift(t);-->
+              <!--analytics.push(e);-->
+              <!--return analytics}};-->
+          <!--for(var t=0;t<analytics.methods.length;t++){-->
+            <!--var e=analytics.methods[t];-->
+            <!--analytics[e]=analytics.factory(e)}-->
+          <!--analytics.load=function(t){-->
+            <!--var e=document.createElement("script");-->
+            <!--e.type="text/javascript";-->
+            <!--e.async=!0;-->
+            <!--e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";-->
+            <!--var n=document.getElementsByTagName("script")[0];-->
+            <!--n.parentNode.insertBefore(e,n)};-->
+          <!--analytics.SNIPPET_VERSION="3.1.0";-->
+          <!--analytics.load("fLDtpYXRjFYnHlp1gvzl4I3Gv8gDoQ8m");-->
+        <!--}}();-->
+  <!--</script>-->
+<!--<script src="https://cdn.jsdelivr.net/g/prism@1.5.0(prism.js+components/prism-clike.min.js+components/prism-c.min.js+components/prism-objectivec.min.js+components/prism-java.min.js+components/prism-javascript.min.js+components/prism-swift.min.js+components/prism-cpp.min.js+components/prism-python.min.js+components/prism-ruby.min.js+plugins/line-numbers/prism-line-numbers.min.js)"></script><script src="/bundle.js?t=1469045550236"></script>-->
+<!--<div id="ads"></div>-->
+<!--<iframe id="intercom-frame" style="display: none;"></iframe>-->
+</body>
+</html>

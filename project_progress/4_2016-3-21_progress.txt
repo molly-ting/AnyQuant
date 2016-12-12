@@ -1,0 +1,25 @@
+who:何梦婷
+when:第4周
+what:添加过滤界面，美化界面，完善功能
+problem:JavaFx内嵌
+todo:美化界面，添加图表
+
+who:庞云奎
+when:第4周
+what:完成用例文档
+problem:逻辑层和集成层改动较大，会影响展示层
+todo:完成文档工作，完成逻辑层和集成层的开发
+
+
+who:卢海龙
+when:第4周
+what:学习javafx，将javafx的折线图添加到了界面当中；改善界面，设计界面布局
+problem: javafx中的observablList还不懂，有些监听功能没法添加、K线图没有画出来
+todo: 完善图表功能、画K线图、写文档
+
+
+who:裴玉林
+when:第四周
+what:完成行业类别的功能的实现
+problem:网络链接出错不知道怎么修复
+todo:完成新闻模块
